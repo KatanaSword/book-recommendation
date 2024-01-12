@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto&display=swap");
+
+/* || Variable || */
+
+:root {
+  --BACKGROUND-COLOR-BODY: #667eea;
+  --BACKGROUND-COLOR-BODY-LINEAR-GRADIENT: #667eea, #764ba2;
+  --BACKGROUND-COLOR-HEADER: #fff;
+  --BACKGROUND-COLOR-FOOTER: #fff;
+  --BACKGROUND-COLOR-BOOK-CONTAINER: #fff;
+  --BACKGROUND-COLOR-BUTTON: #4f46e5;
+  --BACKGROUND-COLOR-BUTTON-HOVER: #000;
+  --COLOR-BUTTON: #fff;
+  --COLOR-SOCIAL: #000;
+  --COLOR-SOCIAL-HOVER: #58606bf0;
+  --COLOR-BOX-SHADOW: #000;
+  --COLOR-AUTHER: #ff4500;
+  --COLOR-QUOTATION-MARK: #ff4500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style Body */
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: var(--BACKGROUND-COLOR-BODY);
+  background: linear-gradient(
+      to bottom right,
+      var(--BACKGROUND-COLOR-BODY-LINEAR-GRADIENT)
+    )
+    no-repeat center center;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* Style Header */
+
+header {
+  padding: 0.5rem 0;
+  background-color: var(--BACKGROUND-COLOR-HEADER);
+  box-shadow: 0 1px 2px var(--COLOR-BOX-SHADOW);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Style Main */
+
+main {
+  background-color: Var(--BACKGROUND-COLOR-BOOK-CONTAINER);
+  box-shadow: 0 1px 2px var(--COLOR-BOX-SHADOW);
+  height: 22rem;
+  width: 20rem;
+  padding: 0 1.5rem;
+  border-radius: 10px;
+  transition-duration: 1s;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+main:hover {
+  transition-duration: 1s;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.book-container {
+  margin: 6rem 0 1.5rem 0;
+  height: 8.4rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.paragraph {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.quotation-mark {
+  color: var(--COLOR-QUOTATION-MARK);
+}
+
+.auther-content {
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--COLOR-AUTHER);
+  letter-spacing: 2px;
+  display: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+#fiction-btn,
+#non-fiction-btn {
+  height: 2.5rem;
+  width: 6rem;
+  border: none;
+  transition-duration: 1s;
+  font-size: 0.9rem;
+  color: var(--COLOR-BUTTON);
+  background-color: Var(--BACKGROUND-COLOR-BUTTON);
+}
+
+#fiction-btn:hover,
+#non-fiction-btn:hover {
+  background-color: var(--BACKGROUND-COLOR-BUTTON-HOVER);
+  border-radius: 0 20px 0 20px;
+  transition-duration: 1s;
+}
+
+/* Style Footer */
+
+footer {
+  background-color: var(--BACKGROUND-COLOR-FOOTER);
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.copyright {
+  opacity: 0.7;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social {
+  color: var(--COLOR-SOCIAL);
+}
+
+.social:hover {
+  color: var(--COLOR-SOCIAL-HOVER);
+}
+
+/* || Media Query || */
+
+/* lg */
+
+@media screen and (min-width: 1024px) {
+}
+
+/* md */
+
+@media screen and (min-width: 768px) {
+}
+
+/* sm */
+
+@media screen and (min-width: 640px) {
+}
