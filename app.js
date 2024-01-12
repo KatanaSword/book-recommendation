@@ -1,5 +1,6 @@
-const book = document.querySelector(".book");
-const bookAuther = document.querySelector(".auther")
+const book = document.querySelector(".paragraph");
+const autherContent = document.querySelector(".auther-content");
+const bookAuther = document.querySelector(".auther");
 const fictionBtn = document.querySelector("#fiction-btn");
 const nonFictionBtn = document.querySelector("#non-fiction-btn");
 
@@ -166,12 +167,14 @@ const nonFictionBooks = [
 ];
 
 fictionBtn.addEventListener("click", function() {
+    autherContent.style.display = "block";
     const randomFictionBook = Math.floor(Math.random() * fictionBooks.length);
     book.innerText = fictionBooks[randomFictionBook].title;
     bookAuther.innerText = fictionBooks[randomFictionBook].author;
 });
 
 nonFictionBtn.addEventListener("click", function() {
+    autherContent.style.display = "block";
     const randomNonFictionBook = Math.floor(Math.random() * nonFictionBooks.length);
     book.innerText = nonFictionBooks[randomNonFictionBook].title;
     bookAuther.innerText = nonFictionBooks[randomNonFictionBook].author;
