@@ -56,12 +56,13 @@ main {
   background-color: Var(--BACKGROUND-COLOR-BOOK-CONTAINER);
   box-shadow: 0 1px 2px var(--COLOR-BOX-SHADOW);
   height: 22rem;
-  width: 20rem;
-  padding: 0 1.5rem;
+  width: 19rem;
+  padding: 1.5rem 1.5rem;
+  margin: auto;
   border-radius: 10px;
   transition-duration: 1s;
   display: flex;
-  align-self: center;
+  justify-content: space-around;
   flex-direction: column;
 }
 
@@ -72,18 +73,15 @@ main:hover {
 }
 
 .book-container {
-  margin: 6rem 0 1.5rem 0;
-  height: 8.4rem;
-  width: 100%;
   text-align: center;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  height: 15rem;
+  width: 16rem;
 }
 
 .paragraph {
-  flex: 1;
   font-size: 1.2rem;
+  height: 75%;
+  padding-top: 2.4rem;
 }
 
 .quotation-mark {
@@ -96,6 +94,7 @@ main:hover {
   color: var(--COLOR-AUTHER);
   letter-spacing: 2px;
   display: none;
+  padding: 3px 0;
 }
 
 .btn {
@@ -114,11 +113,19 @@ main:hover {
   background-color: Var(--BACKGROUND-COLOR-BUTTON);
 }
 
+#fiction-btn {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+#non-fiction-btn {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
 #fiction-btn:hover,
 #non-fiction-btn:hover {
   background-color: var(--BACKGROUND-COLOR-BUTTON-HOVER);
-  border-radius: 0 20px 0 20px;
   transition-duration: 1s;
+  border-radius: 20px 0 20px 0;
 }
 
 /* Style Footer */
@@ -150,19 +157,76 @@ footer {
   color: var(--COLOR-SOCIAL-HOVER);
 }
 
-/* || Media Query || */
+/* || Responsive Design || */
+
+/* 2xl */
+
+@media screen and (max-width: 1536px) {
+  header {
+    font-size: 1.1vw;
+  }
+}
+
+/* xl */
+
+@media screen and (max-width: 1280px) {
+  header {
+    font-size: 1.3vw;
+  }
+}
 
 /* lg */
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
+  header {
+    font-size: 1.5vw;
+  }
 }
 
 /* md */
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 2vw;
+  }
+
+  #fiction-btn:hover,
+  #non-fiction-btn:hover {
+    border-radius: 0;
+  }
+
+  main:hover {
+    border-radius: 10px;
+    box-shadow: 0 1px 2px var(--COLOR-BOX-SHADOW);
+  }
 }
 
 /* sm */
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
+  header {
+    font-size: 1.8vmax;
+  }
+}
+
+/* Mobile Landscape */
+
+@media screen and (max-height: 430px) and (min-aspect-ratio: 7/4) {
+  body {
+    height: 150vh;
+  }
+
+  #fiction-btn:hover,
+  #non-fiction-btn:hover {
+    border-radius: 0;
+  }
+
+  main:hover {
+    border-radius: 10px;
+    box-shadow: 0 1px 2px var(--COLOR-BOX-SHADOW);
+  }
+
+  footer {
+    height: 4rem;
+  }
 }
